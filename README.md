@@ -7,7 +7,7 @@ By default, this mixin creates a right triangle that is absolute positioned to i
 ## Options
 
 ```scss
-angled-edge ( $location, $hypotenuse, $fill, $width: 1500, $height: 80 )
+angled-edge( $location, $hypotenuse, $fill, $width: 1500, $height: 80 )
 ```
 
 | Parameter | Description |
