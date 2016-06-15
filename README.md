@@ -8,7 +8,7 @@ Import partial:
 ```scss
 @import "angled-edges";
 ```
-Include mixin:
+Example include of mixin:
 ```scss
 @include angled-edge('outside bottom','lower left','#FF0000');
 ```
