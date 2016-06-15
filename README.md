@@ -13,8 +13,8 @@ angled-edge( $location, $hypotenuse, $fill, $width: 1500, $height: 80 )
 | `$location` | Location of shape relative to parent element <uL><li>'inside top'</li><li>'outside top'</li><li>'inside bottom'</li><li>'outside bottom'</li></ul> |
 | `$hypotenuse` | Side of the right triangle that the hypotenuse is on <uL><li>'upper left'</li><li>'upper right'</li><li>'lower left'</li><li>'lower righ't</li></ul> |
 | `$fill` | Fill color of triangle |
-| `$height` | Height of triangle - 80px default |
 | `$width` | Width of triangle - 1500px default |
+| `$height` | Height of triangle - 80px default |
 
 ## Usage
 
