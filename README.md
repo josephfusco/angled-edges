@@ -2,8 +2,6 @@
 
 A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.
 
-By default, this mixin creates a right triangle that is absolute positioned to it's parent element.
-
 ## Options
 
 ```scss
@@ -28,6 +26,8 @@ Include mixin:
 ```scss
 @include angled-edge('outside bottom','lower left','#FF0000');
 ```
+
+We are essentially creating an svg right triangle that is encoded as a background image, and attached to a section by absolutely positioning within a pseudo element to the parent element the mixin is included in.
 
 ## Browser Support
 
