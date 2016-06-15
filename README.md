@@ -8,18 +8,15 @@ Import partial:
 ```scss
 @import "angled-edges";
 ```
-Example include of mixin:
+
+This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**.
 ```scss
-@include angled-edge('outside bottom','lower left','#FF0000');
+@include angled-edge($location, $hypotenuse, $fill, $width: 1500, $height: 80);
 ```
 
-We are essentially creating an svg right triangle that is encoded as a background image, and attached to a section by absolutely positioning within a pseudo element to the parent element the mixin is included in.
+The main mixin creates an svg right triangle that is encoded, set as a background image of a psuedo element, and absolutely positioned.
 
 ## Options
-
-```scss
-angled-edge( $location, $hypotenuse, $fill, $width: 1500, $height: 80 )
-```
 
 | Parameter | Description |
 | ----------| ----------- |
