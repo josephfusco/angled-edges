@@ -110,8 +110,3 @@
 		@error "Invalid argument for $location. Must use: 'inside top', 'outside top', 'inside bottom', 'outside bottom'";
 	}
 }
-
-// demo
-section {
-  @include angled-edge('inside top','lower right','blue');
-}
