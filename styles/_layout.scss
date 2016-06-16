@@ -86,11 +86,13 @@ header {
     }
 
     pre {
-        max-width: 650px;
+        max-width: 670px;
         margin: 0 auto;
         display: block;
         opacity: 0;
-        code { padding: 30px !important;}
+        code {
+            padding: 30px !important;
+        }
         animation: fadeIn .9s .6s ease forwards;
     }
 

@@ -466,7 +466,7 @@ header {
     -webkit-animation: fadeIn .9s .3s ease forwards;
             animation: fadeIn .9s .3s ease forwards; }
   header pre {
-    max-width: 650px;
+    max-width: 670px;
     margin: 0 auto;
     display: block;
     opacity: 0;
