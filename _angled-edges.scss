@@ -81,8 +81,14 @@
 		'lower left': '0,0 #{$width},#{$height} #{$width},0',
 		'lower right': '0,0 #{$width},0 0,#{$height}'
 	);
+	
+	// ensure $fill color is using rgb()
+	$fill_rgb: 'rgb(#{red($fill)},#{green($fill)},#{blue($fill)})';
+	
+	// capture alpha component of $fill to use with fill-opacity
+	$fill_alpha: alpha($fill);
 
-	$wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill}"><polygon points="#{map-get($points,$hypotenuse)}"></polygon></svg>');
+	$wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill_rgb}" fill-opacity="#{$fill_alpha}"><polygon points="#{map-get($points,$hypotenuse)}"></polygon></svg>');
 
     position: relative;
 
