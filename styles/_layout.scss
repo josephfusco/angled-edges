@@ -95,7 +95,7 @@ header {
     }
 
     .demo-edge {
-        @include angled-edge('outside bottom','lower right', darken(#EE3924,10%));
+        @include angled-edge('outside bottom','lower right', darken(#EE3924,5%));
         position: absolute;
         width: 100%;
         height: 100px;
