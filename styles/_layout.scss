@@ -103,7 +103,8 @@ header {
         left: 0;
         right: 0;
         z-index: 2;
-        animation: pulse 1.6s infinite;
+        opacity: 0;
+        animation: pulse 1.6s 1.2s infinite;
     }
 }
 

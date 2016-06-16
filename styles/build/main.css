@@ -483,8 +483,9 @@ header {
     left: 0;
     right: 0;
     z-index: 2;
-    -webkit-animation: pulse 1.6s infinite;
-            animation: pulse 1.6s infinite; }
+    opacity: 0;
+    -webkit-animation: pulse 1.6s 1.2s infinite;
+            animation: pulse 1.6s 1.2s infinite; }
     header .demo-edge::after {
       background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22#cf2410%22%3E%3Cpolygon%20points=%220,0%201500,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
       background-position: center center;
