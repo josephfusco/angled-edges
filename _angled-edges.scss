@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------
-// Angled Edges v1.0 (https://github.com/josephfusco/angled-edges)
+// Angled Edges v1.0.1 (https://github.com/josephfusco/angled-edges)
 // Copyright 2016 Joseph Fusco
 // Licensed under MIT (https://github.com/josephfusco/angled-edges/blob/master/LICENSE)
 //-------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@
 /// @param  {Number}  $height
 /// @output '::before' and/or "::after" with svg background image
 ///
-@mixin angled-edge($location, $hypotenuse, $fill, $width: 1500, $height: 100) {
+@mixin angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100) {
 
 	// polygon points for right triangle
 	$points: (
@@ -83,13 +83,13 @@
 	);
 
 	// ensure $fill color is using rgb()
-	$fill_rgb: 'rgb(#{red($fill)},#{green($fill)},#{blue($fill)})';
-	
+	$fill_rgb: 'rgb(#{ceil(red($fill))},#{ceil(green($fill))},#{ceil(blue($fill))})';
+
 	// capture alpha component of $fill to use with fill-opacity
 	$fill_alpha: alpha($fill);
-	
+
 	$wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill_rgb}" fill-opacity="#{$fill_alpha}"><polygon points="#{map-get($points,$hypotenuse)}"></polygon></svg>');
-	
+
 	position: relative;
 
 	@if $location == 'inside top' {
