@@ -2,6 +2,8 @@
 
 A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.
 
+<img width="1263" alt="screen shot 2016-06-16 at 12 50 41 am" src="https://cloud.githubusercontent.com/assets/6676674/16105823/84765646-335c-11e6-8400-d084bbff6a4e.png">
+
 ## Usage
 
 Import partial:
