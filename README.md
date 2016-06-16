@@ -2,11 +2,21 @@
 
 A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.
 
-## Options
+## Usage
 
+Import partial:
 ```scss
-angled-edge( $location, $hypotenuse, $fill, $width: 1500, $height: 80 )
+@import "angled-edges";
 ```
+
+This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**.
+```scss
+@include angled-edge($location, $hypotenuse, $fill, $width: 1500, $height: 80);
+```
+
+The main mixin creates an svg right triangle that is encoded, set as a background image of a psuedo element, and absolutely positioned.
+
+## Options
 
 | Parameter | Description |
 | ----------| ----------- |
@@ -15,19 +25,6 @@ angled-edge( $location, $hypotenuse, $fill, $width: 1500, $height: 80 )
 | `$fill` | Fill color of triangle |
 | `$width` | Width of triangle - 1500px default |
 | `$height` | Height of triangle - 80px default |
-
-## Usage
-
-Import partial:
-```scss
-@import "angled-edges";
-```
-Include mixin:
-```scss
-@include angled-edge('outside bottom','lower left','#FF0000');
-```
-
-We are essentially creating an svg right triangle that is encoded as a background image, and attached to a section by absolutely positioning within a pseudo element to the parent element the mixin is included in.
 
 ## Browser Support
 
