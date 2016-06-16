@@ -28,6 +28,10 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 | `$width` | Width of triangle - 1500px default |
 | `$height` | Height of triangle - 80px default |
 
+## Demo
+
+[http://angled-edges.josephfus.co](http://angled-edges.josephfus.co)
+ 
 ## Browser Support
 
 Anywhere SVG is supported.
