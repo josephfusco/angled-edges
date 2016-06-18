@@ -53,7 +53,7 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	content: '';
-	height: $height + px;
+	height: $height * 1px;
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -100,7 +100,7 @@
 	} @else if $location == 'outside top' {
 		&::before {
 			@include ae-pseudo($wedge, $height);
-			top: -$height + px;
+			top: -$height * 1px;
 		}
 	} @else if $location == 'inside bottom' {
 		&::after {
@@ -110,7 +110,7 @@
 	} @else if $location == 'outside bottom' {
 		&::after {
 			@include ae-pseudo($wedge, $height);
-			bottom: -$height + px;
+			bottom: -$height * 1px;
 		}
 	} @else {
 		@error "Invalid argument for $location. Must use: 'inside top', 'outside top', 'inside bottom', 'outside bottom'";
