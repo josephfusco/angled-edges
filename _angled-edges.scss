@@ -30,14 +30,14 @@
 /// @return {String}  Encoded svg data
 ///
 @function ae-svg-encode($string){
-	$result: ae-str-replace($string, "<svg", "<svg xmlns='http://www.w3.org/2000/svg'");
-	$result: ae-str-replace($result,'%', '%25');
-	$result: ae-str-replace($result,'"', '%22');
-	$result: ae-str-replace($result,"'", '%27');
-	$result: ae-str-replace($result,' ', '%20');
-	$result: ae-str-replace($result,'<', '%3C');
-	$result: ae-str-replace($result,'>', '%3E');
-	@return "data:image/svg+xml," + $result;
+	$result: ae-str-replace($string, '<svg', "<svg xmlns='http://www.w3.org/2000/svg'");
+	$result: ae-str-replace($result, '%', '%25');
+	$result: ae-str-replace($result, '"', '%22');
+	$result: ae-str-replace($result, "'", '%27');
+	$result: ae-str-replace($result, ' ', '%20');
+	$result: ae-str-replace($result, '<', '%3C');
+	$result: ae-str-replace($result, '>', '%3E');
+	@return 'data:image/svg+xml,' + $result;
 }
 
 /// Outputs pseudo content for main mixin
@@ -83,31 +83,31 @@
 	);
 
 	// ensure $fill color is using rgb()
-	$fill_rgb: 'rgb(#{ceil(red($fill))},#{ceil(green($fill))},#{ceil(blue($fill))})';
+	$fill-rgb: 'rgb(' + red($fill) + ',' + green($fill) + ',' + blue($fill) + ')';
 
 	// capture alpha component of $fill to use with fill-opacity
-	$fill_alpha: alpha($fill);
+	$fill-alpha: alpha($fill);
 
-	$wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill_rgb}" fill-opacity="#{$fill_alpha}"><polygon points="#{map-get($points,$hypotenuse)}"></polygon></svg>');
+	$wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>');
 
 	position: relative;
 
-	@if $location == 'inside top' {
+	@if ($location == 'inside top') {
 		&::before {
 			@include ae-pseudo($wedge, $height);
 			top: 0;
 		}
-	} @else if $location == 'outside top' {
+	} @else if ($location == 'outside top') {
 		&::before {
 			@include ae-pseudo($wedge, $height);
 			top: -$height * 1px;
 		}
-	} @else if $location == 'inside bottom' {
+	} @else if ($location == 'inside bottom') {
 		&::after {
 			@include ae-pseudo($wedge, $height);
 			bottom: 0;
 		}
-	} @else if $location == 'outside bottom' {
+	} @else if ($location == 'outside bottom') {
 		&::after {
 			@include ae-pseudo($wedge, $height);
 			bottom: -$height * 1px;
