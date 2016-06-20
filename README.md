@@ -1,6 +1,6 @@
 # Angled Edges :triangular_ruler: [![Build Status](https://travis-ci.org/josephfusco/angled-edges.svg?branch=master)](https://travis-ci.org/josephfusco/angled-edges) [![Bower version](https://badge.fury.io/bo/angled-edges.svg)](https://badge.fury.io/bo/angled-edges) [![MIT License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
 
-A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.
+A Sass mixin for creating angled edges on sections by dynamically encoding SVGs.
 
 <img width="1262" alt="angled edge" src="https://cloud.githubusercontent.com/assets/6676674/16118929/33700404-33a7-11e6-8e94-a9ace624a41a.png">
 
