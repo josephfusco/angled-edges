@@ -493,7 +493,7 @@ header {
     -webkit-animation: pulse 1.6s 1.2s infinite;
             animation: pulse 1.6s 1.2s infinite; }
     header .demo-edge::after {
-      background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222800%22%20fill=%22rgb(207,36,17)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202800,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222800%22%20fill=%22rgb(206.93644,35.90678,16.06356)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202800,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
       background-position: center center;
       background-repeat: no-repeat;
       content: '';
