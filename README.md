@@ -31,7 +31,7 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 ## Demo
 
 [http://angled-edges.josephfus.co](http://angled-edges.josephfus.co)
- 
+
 ## Browser Support
 
 Anywhere SVG is supported.
