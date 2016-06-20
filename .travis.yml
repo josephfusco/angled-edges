@@ -5,4 +5,4 @@ language: sass
 before_install:
  - gem install sass
 
-sudo: false
+sudo: required
