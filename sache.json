@@ -1,0 +1,6 @@
+{
+  "name": "angled-edges",
+  "description": "A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.",
+  "tags": ["angled", "edges", "svg"],
+  "website": "http://angled-edges.josephfus.co"
+}
