@@ -16,7 +16,7 @@ This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**.
 @include angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100);
 ```
 
-The main mixin creates an svg right triangle that is encoded, set as a background image of a psuedo element, and absolutely positioned.
+The main mixin creates an svg right triangle that is encoded, set as a background image of a pseudo element, and absolutely positioned.
 
 ## Options
 
