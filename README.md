@@ -1,4 +1,4 @@
-# Angled Edges [![Build Status](https://travis-ci.org/josephfusco/angled-edges.svg?branch=master)](https://travis-ci.org/josephfusco/angled-edges) [![Bower version](https://badge.fury.io/bo/angled-edges.svg)](https://badge.fury.io/bo/angled-edges) [![MIT License](http://img.shields.io/:license-mit-blue.svg)](http://mit.josephfus.co/?year=2016)
+# Angled Edges [![Build Status](https://travis-ci.org/josephfusco/angled-edges.svg?branch=master)](https://travis-ci.org/josephfusco/angled-edges) [![Bower version](https://badge.fury.io/bo/angled-edges.svg)](https://badge.fury.io/bo/angled-edges) [![MIT License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
 
 A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.
 
