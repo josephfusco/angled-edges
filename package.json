@@ -1,6 +1,6 @@
 {
   "name": "angled-edges-demo",
-  "description": "Demo site for angled edges.",
+  "description": "Demo site for angled edges",
   "author": "Joseph Fusco",
   "license": "GPL-2.0",
   "devDependencies": {
