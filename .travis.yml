@@ -3,6 +3,7 @@ script:
 
 language: sass
 before_install:
+ - chmod a+x test/travis.rb
  - gem install sass
-
+ 
 sudo: false
