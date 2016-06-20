@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------
-// Angled Edges v1.0.2 (https://github.com/josephfusco/angled-edges)
+// Angled Edges v1.0.3 (https://github.com/josephfusco/angled-edges)
 // Copyright 2016 Joseph Fusco
 // Licensed under MIT (https://github.com/josephfusco/angled-edges/blob/master/LICENSE)
 //-------------------------------------------------------------------------------------
@@ -83,7 +83,7 @@
 	);
 
 	// ensure $fill color is using rgb()
-	$fill-rgb: 'rgb(' + red($fill) + ',' + green($fill) + ',' + blue($fill) + ')';
+	$fill-rgb: 'rgb(' + round(red($fill)) + ',' + round(green($fill)) + ',' + round(blue($fill)) + ')';
 
 	// capture alpha component of $fill to use with fill-opacity
 	$fill-alpha: alpha($fill);
