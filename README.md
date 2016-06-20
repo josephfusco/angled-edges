@@ -4,7 +4,7 @@ A Sass mixin for creating angled edges on sections by dynamically encoding SVGs.
 
 <img width="1262" alt="angled edge" src="https://cloud.githubusercontent.com/assets/6676674/16118929/33700404-33a7-11e6-8e94-a9ace624a41a.png">
 
-## Usage :ledger:
+## Usage
 
 Import partial:
 ```scss
@@ -18,7 +18,7 @@ This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**.
 
 The main mixin creates an svg right triangle that is encoded, set as a background image of a pseudo element, and absolutely positioned.
 
-## Options :wrench:
+## Options
 
 | Parameter | Description |
 | ----------| ----------- |
@@ -28,11 +28,11 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 | `$width` | Width of triangle - 2800px default |
 | `$height` | Height of triangle - 100px default |
 
-## Demo :bicyclist:
+## Demo
 
 [http://angled-edges.josephfus.co](http://angled-edges.josephfus.co)
 
-## Browser Support :white_check_mark:
+## Browser Support
 
 Anywhere SVG is supported.
 
