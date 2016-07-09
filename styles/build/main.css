@@ -373,9 +373,8 @@ html {
 
 .outer-container {
   margin: 0 auto;
-  max-width: 1500px;
-  border-left: 30px solid white;
-  border-right: 30px solid white;
+  max-width: 2000px;
+  box-shadow: 30px 0 0 white, -30px 0 0 white;
   box-sizing: border-box; }
 
 .container {
@@ -473,7 +472,7 @@ header {
     header {
       position: relative; }
       header::after {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(238,57,36)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201500,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(238,57,36)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202000,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
@@ -534,7 +533,7 @@ header {
       header .demo-edge {
         position: relative; }
         header .demo-edge::after {
-          background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(207,36,16)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201500,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(207,36,16)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202000,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
           background-position: center center;
           background-repeat: no-repeat;
           content: '';
@@ -571,7 +570,7 @@ header {
     #section-1 {
       position: relative; }
       #section-1::after {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(255,255,255)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,100%201500,100%200,0%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(255,255,255)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,100%202000,100%200,0%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
@@ -605,7 +604,7 @@ header {
     #section-2 {
       position: relative; }
       #section-2::after {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(255,255,255)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201500,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(255,255,255)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202000,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
@@ -639,7 +638,7 @@ header {
     #section-3 {
       position: relative; }
       #section-3::after {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(238,238,238)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201500,100%201500,0%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(238,238,238)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202000,100%202000,0%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
@@ -673,7 +672,7 @@ header {
     #section-4 {
       position: relative; }
       #section-4::after {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(221,221,221)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201500,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(221,221,221)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202000,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
@@ -707,7 +706,7 @@ header {
     #section-5 {
       position: relative; }
       #section-5::after {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(204,204,204)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201500,100%201500,0%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(204,204,204)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202000,100%202000,0%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
@@ -744,7 +743,7 @@ header {
     #section-6 {
       position: relative; }
       #section-6::before {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(204,204,204)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201500,100%201500,0%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(204,204,204)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202000,100%202000,0%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
@@ -780,7 +779,7 @@ footer {
     footer {
       position: relative; }
       footer::before {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%221500%22%20fill=%22rgb(238,57,36)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,100%201500,100%201500,0%22%3E%3C/polygon%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222000%22%20fill=%22rgb(238,57,36)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,100%202000,100%202000,0%22%3E%3C/polygon%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
         content: '';
