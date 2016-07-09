@@ -34,19 +34,28 @@ h1 {
 	font-weight: bold;
 	font-size: 60px;
 	margin: 0 0 10px;
+
+	@media (max-width: 767px){
+		font-size: 40px;
+	}
 }
 
 h2 {
 	font-size: 40px;
 	margin: 0;
+
 	@media (max-width: 767px){
-		font-size: 28px;
+		font-size: 20px;
 	}
 }
 
 p {
 	font-size: 20px;
 	margin: 0;
+
+	@media (max-width: 767px){
+		font-size: 14px;
+	}
 }
 
 ::selection {
@@ -62,10 +71,12 @@ p {
 // Animations
 
 @keyframes fadeIn {
+
 	from {
 		transform: translateY(-3px);
 		opacity: 0;
 	}
+
 	to {
 		transform: translateY(0);
 		opacity: 1;
@@ -73,12 +84,14 @@ p {
 }
 
 @keyframes pulse {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
+
+	0%, 100% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
 }
 
 // Demo Angled Edges
@@ -254,5 +267,5 @@ footer {
 			color: #EE3924;
 			background-color: #FFF;
 		}
-
+	}
 }

@@ -393,17 +393,23 @@ h1 {
   font-weight: bold;
   font-size: 60px;
   margin: 0 0 10px; }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 40px; } }
 
 h2 {
   font-size: 40px;
   margin: 0; }
   @media (max-width: 767px) {
     h2 {
-      font-size: 28px; } }
+      font-size: 20px; } }
 
 p {
   font-size: 20px;
   margin: 0; }
+  @media (max-width: 767px) {
+    p {
+      font-size: 14px; } }
 
 ::-moz-selection {
   background: #333;
