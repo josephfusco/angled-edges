@@ -22,8 +22,8 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 
 | Parameter | Description |
 | ----------| ----------- |
-| `$location` | Location of shape relative to parent element <uL><li>'inside top'</li><li>'outside top'</li><li>'inside bottom'</li><li>'outside bottom'</li></ul> |
-| `$hypotenuse` | Side of the right triangle that the hypotenuse is on <uL><li>'upper left'</li><li>'upper right'</li><li>'lower left'</li><li>'lower right'</li></ul> |
+| `$location` | Location of shape relative to parent element <uL><li><code>inside top</code></li><li><code>outside top</code></li><li><code>inside bottom</code></li><li><code>outside bottom</code></li></ul> |
+| `$hypotenuse` | Side of the right triangle that the hypotenuse is on <uL><li><code>upper left</code></li><li><code>upper right</code></li><li><code>lower left</code></li><li><code>lower right</code></li></ul> |
 | `$fill` | Fill color of triangle |
 | `$width` | Width of triangle - 2800px default |
 | `$height` | Height of triangle - 100px default |
