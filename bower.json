@@ -2,7 +2,7 @@
   "name": "angled-edges",
   "description": "A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.",
   "homepage": "https://github.com/josephfusco/angled-edges",
-  "version": "1.0.4",
+  "version": "1.1",
   "main": [
     "_angled-edges.scss"
   ],
