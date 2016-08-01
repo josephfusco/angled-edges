@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------
-// Angled Edges v1.0.4 (https://github.com/josephfusco/angled-edges)
+// Angled Edges v1.1 (https://github.com/josephfusco/angled-edges)
 // Copyright 2016 Joseph Fusco
 // Licensed under MIT (https://github.com/josephfusco/angled-edges/blob/master/LICENSE)
 //-------------------------------------------------------------------------------------
@@ -74,6 +74,8 @@
 ///
 @mixin angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100) {
 
+	position: relative;
+
 	// polygon points for right triangle
 	$points: (
 		'upper left': '0,#{$height} #{$width},#{$height} #{$width},0',
@@ -89,8 +91,6 @@
 	$fill-alpha: alpha($fill);
 
 	$wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>');
-
-	position: relative;
 
 	@if ($location == 'inside top') {
 		&::before {
@@ -113,6 +113,10 @@
 			bottom: -$height * 1px;
 		}
 	} @else {
-		@error "Invalid argument for $location. Must use: 'inside top', 'outside top', 'inside bottom', 'outside bottom'";
+		@error "Invalid argument for $location - must use: `inside top`, `outside top`, `inside bottom`, `outside bottom`";
+	}
+
+	@if (map-has-key($points, $hypotenuse) == false) {
+		@error "Invalid argument for $hypotenuse - must use: `upper left`, `upper right`, `lower left`, `lower right`";
 	}
 }
