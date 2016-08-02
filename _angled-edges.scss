@@ -70,7 +70,7 @@
 /// @param  {Color}   $fill
 /// @param  {Number}  $width
 /// @param  {Number}  $height
-/// @output '::before' and/or "::after" with svg background image
+/// @output '::before' and/or '::after' with svg background image
 ///
 @mixin angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100) {
 
