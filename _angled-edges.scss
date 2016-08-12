@@ -1,125 +1,8 @@
 //-------------------------------------------------------------------------------------
-// Angled Edges v1.2-alpha (https://github.com/josephfusco/angled-edges)
+// Angled Edges v1.1.2 (https://github.com/josephfusco/angled-edges)
 // Copyright 2016 Joseph Fusco
 // Licensed under MIT (https://github.com/josephfusco/angled-edges/blob/master/LICENSE)
 //-------------------------------------------------------------------------------------
-
-$AE_PI: 3.1415926535897932384626433832795028841971693993751;
-
-/// Power function for exponentiation operators
-///
-/// @author Daniel Perez Alvarez
-/// @link   https://unindented.org/articles/trigonometry-in-sass/
-///
-/// @param  {Number}  $number
-/// @param  {Number}  $exp
-/// @return {Number}
-///
-@function ae-pow($number, $exp) {
-	$value: 1;
-
-	@if $exp > 0 {
-		@for $i from 1 through $exp {
-			$value: $value * $number;
-		}
-	} @else if $exp < 0 {
-		@for $i from 1 through -$exp {
-			$value: $value / $number;
-		}
-	}
-
-	@return $value;
-}
-
-/// Factorial function
-///
-/// @author Daniel Perez Alvarez
-/// @link   https://unindented.org/articles/trigonometry-in-sass/
-///
-/// @param  {Number}  $number
-/// @return {Number}
-///
-@function ae-fact($number) {
-	$value: 1;
-
-	@if $number > 0 {
-		@for $i from 1 through $number {
-			$value: $value * $i;
-		}
-	}
-
-	@return $value;
-}
-
-/// Radian function
-///
-/// @author Daniel Perez Alvarez
-/// @link   https://unindented.org/articles/trigonometry-in-sass/
-///
-/// @param  {Number}  $angle
-/// @return {Number}  radians
-///
-@function ae-rad($angle) {
-	$unit: unit($angle);
-	$unitless: $angle / ($angle * 0 + 1);
-
-	// If the angle has `deg` as unit, convert to radians.
-	@if $unit == deg {
-		$unitless: $unitless / 180 * $AE_PI;
-	}
-
-	@return $unitless;
-}
-
-/// Sine function
-///
-/// @author Daniel Perez Alvarez
-/// @link   https://unindented.org/articles/trigonometry-in-sass/
-///
-/// @param  {Number}  $angle
-/// @return {Number}
-///
-@function ae-sin($angle) {
-	$sin: 0;
-	$angle: ae-rad($angle);
-
-	@for $i from 0 through 10 {
-		$sin: $sin + ae-pow(-1, $i) * ae-pow($angle, (2 * $i + 1)) / ae-fact(2 * $i + 1);
-	}
-
-	@return $sin;
-}
-
-/// Cosine function
-///
-/// @author Daniel Perez Alvarez
-/// @link   https://unindented.org/articles/trigonometry-in-sass/
-///
-/// @param  {Number}  $angle
-/// @return {Number}
-///
-@function ae-cos($angle) {
-	$cos: 0;
-	$angle: ae-rad($angle);
-
-	@for $i from 0 through 10 {
-		$cos: $cos + ae-pow(-1, $i) * ae-pow($angle, 2 * $i) / ae-fact(2 * $i);
-	}
-
-	@return $cos;
-}
-
-/// Tangent function
-///
-/// @author Daniel Perez Alvarez
-/// @link   https://unindented.org/articles/trigonometry-in-sass/
-///
-/// @param  {Number}  $angle
-/// @return {Number}
-///
-@function ae-tan($angle) {
-	@return ae-sin($angle) / ae-cos($angle);
-}
 
 /// Replace `$search` with `$replace` in `$string`
 ///
@@ -189,20 +72,9 @@ $AE_PI: 3.1415926535897932384626433832795028841971693993751;
 /// @param  {Number}  $height
 /// @output '::before' and/or '::after' with svg background image
 ///
-@mixin angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100, $angle: null) {
+@mixin angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100) {
 
 	position: relative;
-
-	// Use defined angle to set height of triangle
-	@if ($angle) {
-		@if ($angle < 90deg) {
-			$opposite-side: ae-tan($angle) * $width;
-			$height: $opposite-side;
-			@warn "Using $angle makes compiling take a little longer.";
-		} @else {
-			@error "$angle must be less than 90deg";
-		}
-	}
 
 	// polygon points for right triangle
 	$points: (
