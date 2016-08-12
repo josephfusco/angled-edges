@@ -28,9 +28,9 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 | `$location` | Location of shape relative to parent element <uL><li><code>inside top</code></li><li><code>outside top</code></li><li><code>inside bottom</code></li><li><code>outside bottom</code></li></ul> |
 | `$hypotenuse` | Side of the right triangle that the hypotenuse is on <uL><li><code>upper left</code></li><li><code>upper right</code></li><li><code>lower left</code></li><li><code>lower right</code></li></ul> |
 | `$fill` | Fill color of triangle |
-| `$width` | Optional - Width of triangle |
-| `$height` | Optional - Height of triangle |
-| `$angle` | Optional - Can be used to generate the $height based on angle (requires $width). <p>Keep in mind compile times will be slightly longer if used. It is suggested to manually calculate the height if used frequently.</p>|
+| `$width` | Width of triangle - optional |
+| `$height` | Height of triangle - optional |
+| `$angle` | Can be used to generate the $height based on angle (requires $width) - optional |
 
 ## Demo
 
