@@ -11,7 +11,10 @@ Import partial:
 @import "angled-edges";
 ```
 
-This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**. Optional parameters include **width**, **height**, & **angle**.
+This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**.
+
+Optional parameters include **width**, **height**, & **angle**.
+
 ```scss
 @include angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100, $angle: null);
 ```
