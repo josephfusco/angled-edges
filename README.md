@@ -11,9 +11,9 @@ Import partial:
 @import "angled-edges";
 ```
 
-This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**. Optional parameters include **width**, **height**, & **angle**.
+This mixin has 3 required parameters, **location**, **hypotenuse**, & **fill**.
 ```scss
-@include angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100, $angle: null);
+@include angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100);
 ```
 
 The main mixin creates an svg right triangle that is encoded, set as a background image of a pseudo element, and absolutely positioned.
@@ -25,9 +25,8 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 | `$location` | Location of shape relative to parent element <uL><li><code>inside top</code></li><li><code>outside top</code></li><li><code>inside bottom</code></li><li><code>outside bottom</code></li></ul> |
 | `$hypotenuse` | Side of the right triangle that the hypotenuse is on <uL><li><code>upper left</code></li><li><code>upper right</code></li><li><code>lower left</code></li><li><code>lower right</code></li></ul> |
 | `$fill` | Fill color of triangle |
-| `$width` | Width of triangle - optional |
-| `$height` | Height of triangle - optional |
-| `$angle` | Can be used to generate the $height based on angle (requires $width) - optional |
+| `$width` | Width of triangle - 2800px default |
+| `$height` | Height of triangle - 100px default |
 
 ## Demo
 
