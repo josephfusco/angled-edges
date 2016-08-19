@@ -30,13 +30,12 @@
 /// @return {String}  Encoded svg data
 ///
 @function ae-svg-encode($string){
-	$result: ae-str-replace($string, '<svg', "<svg xmlns='http://www.w3.org/2000/svg'");
+	$result: ae-str-replace($string, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
 	$result: ae-str-replace($result, '%', '%25');
-	$result: ae-str-replace($result, '"', '%22');
-	$result: ae-str-replace($result, "'", '%27');
-	$result: ae-str-replace($result, ' ', '%20');
+	$result: ae-str-replace($result, '"', '\'');
 	$result: ae-str-replace($result, '<', '%3C');
 	$result: ae-str-replace($result, '>', '%3E');
+
 	@return 'data:image/svg+xml,' + $result;
 }
 
@@ -113,10 +112,10 @@
 			bottom: -$height * 1px;
 		}
 	} @else {
-		@error "Invalid argument for $location - must use: `inside top`, `outside top`, `inside bottom`, `outside bottom`";
+		@error 'Invalid argument for $location - must use: `inside top`, `outside top`, `inside bottom`, `outside bottom`';
 	}
 
 	@if (map-has-key($points, $hypotenuse) == false) {
-		@error "Invalid argument for $hypotenuse - must use: `upper left`, `upper right`, `lower left`, `lower right`";
+		@error 'Invalid argument for $hypotenuse - must use: `upper left`, `upper right`, `lower left`, `lower right`';
 	}
 }
