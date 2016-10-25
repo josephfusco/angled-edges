@@ -6,4 +6,4 @@
 .travis.yml export-ignore
 bower.json export-ignore
 sache.json export-ignore
-text export-ignore
+test/ export-ignore
