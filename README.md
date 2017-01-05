@@ -1,4 +1,5 @@
-# Angled Edges :triangular_ruler: [![Build Status](https://travis-ci.org/josephfusco/angled-edges.svg?branch=master)](https://travis-ci.org/josephfusco/angled-edges) [![Bower version](https://badge.fury.io/bo/angled-edges.svg)](https://badge.fury.io/bo/angled-edges)
+# Angled Edges :triangular_ruler: [![Build Status](https://travis-ci.org/josephfusco/angled-edges.svg?branch=master)](https://travis-ci.org/josephfusco/angled-edges) [![Bower version](https://badge.fury.io/bo/angled-edges.svg)](https://badge.fury.io/bo/angled-edges) [![Donate](https://img.shields.io/badge/donate-PayPal-brightgreen.svg)](https://www.paypal.me/whitetaildevelopment)
+
 
 A Sass mixin for creating angled edges on sections by dynamically encoding SVGs.
 
