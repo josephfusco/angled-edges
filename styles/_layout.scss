@@ -10,9 +10,6 @@ html {
 
 .outer-container {
 	margin: 0 auto;
-	max-width: $width * 1px;
-	box-shadow: 30px 0 0 white, -30px 0 0 white;
-	box-sizing: border-box;
 }
 
 .container {
@@ -97,132 +94,82 @@ p {
 // Demo Angled Edges
 
 header {
-    background-color: #EE3924;
-    color: #FFF;
-    padding: 100px 0 0;
+	background-color: #EE3924;
+	color: #FFF;
+	padding: 100px 0 0;
+	@include angled-edge('outside bottom','lower right', #EE3924);
 
-    @media (max-width: 767px){
-        @include angled-edge('outside bottom','lower right', #EE3924, 767);
-    }
+	h1 {
+		animation: fadeIn .9s ease forwards;
+	}
 
-    @media (min-width: 768px){
-        @include angled-edge('outside bottom','lower right', #EE3924, $width);
-    }
+	p {
+		margin-bottom: 30px;
+		opacity: 0;
+		animation: fadeIn .9s .3s ease forwards;
+	}
+}
 
-    h1 {
-        animation: fadeIn .9s ease forwards;
-    }
+pre {
+	max-width: 670px;
+	margin: 0 auto;
+	display: block;
+	opacity: 0;
+	animation: fadeIn .9s .6s ease forwards;
 
-    p {
-        margin-bottom: 30px;
-        opacity: 0;
-        animation: fadeIn .9s .3s ease forwards;
-    }
+	@media (max-width: 767px){
+		display: none;
+	}
 
-    pre {
-        max-width: 670px;
-        margin: 0 auto;
-        display: block;
-        opacity: 0;
-        animation: fadeIn .9s .6s ease forwards;
+	code {
+		padding: 30px !important;
+	}
+}
 
-        @media (max-width: 767px){
-            display: none;
-        }
-
-        code {
-            padding: 30px !important;
-        }
-    }
-
-    .demo-edge {
-
-        @media (max-width: 767px){
-            @include angled-edge('outside bottom','lower right', darken(#EE3924,10%), 767);
-        }
-
-        @media (min-width: 768px){
-            @include angled-edge('outside bottom','lower right', darken(#EE3924,10%), $width);
-        }
-
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        opacity: 0;
-        animation: pulse 1.6s 1.2s infinite;
-    }
+.demo-edge {
+	@include angled-edge('outside bottom','lower right', darken(#EE3924,10%));
+	position: relative;
+	width: 100%;
+	height: 100px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	opacity: 0;
+	animation: pulse 1.6s 1.2s infinite;
 }
 
 #section-1 {
-    height: 300px;
-    background-image: url('../../images/bg-nyc.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    @media (max-width: 767px){
-        @include angled-edge('inside bottom','upper right', #FFF, 767);
-    }
-
-    @media (min-width: 768px){
-        @include angled-edge('inside bottom','upper right', #FFF, $width);
-    }
+	height: 300px;
+	background-image: url('../../images/bg-nyc.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include angled-edge('inside bottom','upper right', #FFF);
 }
 
 #section-2 {
-    padding: 150px 0 150px;
-    background-color: #FFF;
-
-    @media (max-width: 767px){
-        @include angled-edge('outside bottom','lower right', #FFF, 767);
-    }
-
-    @media (min-width: 768px){
-        @include angled-edge('outside bottom','lower right', #FFF, $width);
-    }
+	padding: 150px 0 150px;
+	background-color: #FFF;
+	@include angled-edge('outside bottom','lower right', #FFF);
 }
 
 #section-3 {
-    padding: 300px 0 150px;
-    background-color: #EEE;
-
-    @media (max-width: 767px){
-        @include angled-edge('outside bottom','lower left', #EEE, 767);
-    }
-
-    @media (min-width: 768px){
-        @include angled-edge('outside bottom','lower left', #EEE, $width);
-    }
+	padding: 300px 0 150px;
+	background-color: #EEE;
+	@include angled-edge('outside bottom','lower left', #EEE);
 }
 
 #section-4 {
-    padding: 300px 0 150px;
-    background-color: #DDD;
-
-    @media (max-width: 767px){
-        @include angled-edge('outside bottom','lower right', #DDD, 767);
-    }
-
-    @media (min-width: 768px){
-        @include angled-edge('outside bottom','lower right', #DDD, $width);
-    }
+	padding: 300px 0 150px;
+	background-color: #DDD;
+	@include angled-edge('outside bottom','lower right', #DDD);
 }
 
 #section-5 {
-    padding: 300px 0 150px;
-    background-color: #CCC;
-
-    @media (max-width: 767px){
-        @include angled-edge('outside bottom','lower left', #CCC, 767);
-    }
-
-    @media (min-width: 768px){
-        @include angled-edge('outside bottom','lower left', #CCC, $width);
-    }
+	padding: 300px 0 150px;
+	background-color: #CCC;
+	@include angled-edge('outside bottom','lower left', #CCC);
 }
 
 #section-6 {
@@ -231,14 +178,7 @@ header {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-
-	@media (max-width: 767px){
-		@include angled-edge('inside top','lower left', #CCC, 767);
-	}
-
-	@media (min-width: 768px){
-		@include angled-edge('inside top','lower left', #CCC, $width);
-	}
+	@include angled-edge('inside top','lower left', #CCC);
 }
 
 footer {
@@ -246,14 +186,7 @@ footer {
 	color: #FFF;
 	padding-top: 100px;
 	padding-bottom: 100px;
-
-	@media (max-width: 767px){
-		@include angled-edge('outside top','upper left', #EE3924, 767);
-	}
-
-	@media (min-width: 768px){
-		@include angled-edge('outside top','upper left', #EE3924, $width);
-	}
+	@include angled-edge('outside top','upper left', #EE3924);
 
 	.btn {
 		display: inline-block;

@@ -2,76 +2,76 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Angled Edges</title>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-    <link href="styles/build/main.css" media="all" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Angled Edges</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+	<link href="styles/build/main.css" media="all" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
 </head>
 
 <body>
 
-    <div class="outer-container">
+	<header>
+		<h1>Angled Edges</h1>
+		<p>A Sass mixin for creating angled edges on<br> sections by dynamically encoding SVGs.</p>
+		<pre>
+			<code class="scss">@include angled-edge('outside bottom','lower right', #EE3924);</code>
+		</pre>
+		<div class="demo-edge"></div>
+	</header>
 
-        <header>
-            <h1>Angled Edges</h1>
-            <p>A Sass mixin for creating angled edges on<br> sections by dynamically encoding SVGs.</p>
-            <pre><code class="scss">@include angled-edge('outside bottom','lower right', #EE3924);</code></pre>
-            <div class="demo-edge"></div>
-        </header>
+	<section id="section-1">
+		<!--background image-->
+	</section>
 
-        <section id="section-1">
-            <!--background image-->
-        </section>
+	<section id="section-2">
+		<div class="container">
+			<h2>I've seen the lights go out<br> on Broadway</h2>
+		</div>
+	</section>
 
-        <section id="section-2">
-            <div class="container">
-                <h2>I've seen the lights go out<br> on Broadway</h2>
-            </div>
-        </section>
+	<section id="section-3">
+		<div class="container">
+			<h2>I saw the Empire State<br> laid low</h2>
+		</div>
+	</section>
 
-        <section id="section-3">
-            <div class="container">
-                <h2>I saw the Empire State<br> laid low</h2>
-            </div>
-        </section>
+	<section id="section-4">
+		<div class="container">
+			<h2>And life went on beyond<br> the Palisades</h2>
+		</div>
+	</section>
 
-        <section id="section-4">
-            <div class="container">
-                <h2>And life went on beyond<br> the Palisades</h2>
-        </section>
+	<section id="section-5">
+		<div class="container">
+			<h2>They all bought Cadillacs<br>and left there long ago</h2>
+		</div>
+	</section>
 
-        <section id="section-5">
-            <div class="container">
-                <h2>They all bought Cadillacs<br>and left there long ago</h2>
-        </section>
+	<section id="section-6">
+		<!--background image-->
+	</section>
 
-        <section id="section-6">
-            <!--background image-->
-        </section>
+	<footer>
+		<a class="btn" title="Angled Edges Sass Mixin on GitHub" href="https://github.com/josephfusco/angled-edges">View Project on GitHub</a>
+		<p>2017 &copy; <a href="http://josephfus.co">Joseph Fusco</a></p>
+	</footer>
 
-        <footer>
-            <a class="btn" title="Angled Edges Sass Mixin on GitHub" href="https://github.com/josephfusco/angled-edges">View Project on GitHub</a>
-            <p>2016 &copy; <a href="http://josephfus.co">Joseph Fusco</a></p>
-        </footer>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    </div>
+	ga('create', 'UA-57969250-3', 'auto');
+	ga('send', 'pageview');
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-57969250-3', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+	</script>
 
 </body>
 
