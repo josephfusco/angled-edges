@@ -14,7 +14,7 @@ Import partial:
 
 This mixin has 3 required parameters: **location**, **hypotenuse**, **fill**
 ```scss
-@include angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100);
+@include angled-edge($location, $hypotenuse, $fill, $height: 100, $width: 100%);
 ```
 
 The main mixin creates an svg right triangle that is encoded, set as a background image of a pseudo element, and absolutely positioned.
@@ -26,8 +26,12 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 | `$location` | Location of shape relative to parent element <uL><li><code>inside top</code></li><li><code>outside top</code></li><li><code>inside bottom</code></li><li><code>outside bottom</code></li></ul> |
 | `$hypotenuse` | Side of the right triangle that the hypotenuse is on <uL><li><code>upper left</code></li><li><code>upper right</code></li><li><code>lower left</code></li><li><code>lower right</code></li></ul> |
 | `$fill` | Fill color of triangle |
-| `$width` | Optional - Width of triangle (2800px default) |
-| `$height` | Optional - Height of triangle (100px default) |
+| `$height` | Optional - Height of triangle (100px default) - unitless integer |
+| `$width` | Optional - Width of triangle (100% fluid default) - unitless integer |
+
+## Upgrading from 1.x
+
+Version 2 now defaults with a fluid width of 100%. Since this is the preferred value, width and height parameters have switched order with height now being first. This allows for easier usage where `@include angled-edge('outside bottom', 'lower right', 150)` now means a 150px tall with at a default of 100% width. If a fluid width is not needed, you can still pass in a unitless width like in 1.x.
 
 ## Demo
 

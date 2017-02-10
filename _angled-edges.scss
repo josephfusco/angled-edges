@@ -1,10 +1,10 @@
 //-------------------------------------------------------------------------------------
-// Angled Edges v1.1.2 (https://github.com/josephfusco/angled-edges)
-// Copyright 2016 Joseph Fusco
+// Angled Edges v2.0 (https://github.com/josephfusco/angled-edges)
+// Copyright 2017 Joseph Fusco
 // Licensed under MIT (https://github.com/josephfusco/angled-edges/blob/master/LICENSE)
 //-------------------------------------------------------------------------------------
 
-/// Replace `$search` with `$replace` in `$string`
+/// Replace `$search` with `$replace` in `$string`.
 ///
 /// @author Hugo Giraudel
 /// @link   http://www.sassmeister.com/gist/1b4f2da5527830088e4d
@@ -24,7 +24,7 @@
 	@return $string;
 }
 
-/// Encode SVG to use as background
+/// Encode SVG to use as background.
 ///
 /// @param  {String}  $string
 /// @return {String}  Encoded svg data
@@ -39,7 +39,7 @@
 	@return 'data:image/svg+xml,' + $result;
 }
 
-/// Outputs pseudo content for main mixin
+/// Outputs pseudo content for main mixin.
 ///
 /// @author Joseph Fusco
 ///
@@ -47,10 +47,13 @@
 /// @param  {Number}  $height
 /// @output psuedo content
 ///
-@mixin ae-pseudo($wedge, $height) {
+@mixin ae-pseudo($wedge, $height, $width) {
 	background-image: url($wedge);
 	background-position: center center;
 	background-repeat: no-repeat;
+	@if ($width == null) {
+		background-size: 100% 100%;
+	}
 	content: '';
 	height: $height * 1px;
 	left: 0;
@@ -60,22 +63,21 @@
 	z-index: 1;
 }
 
-/// Attatches an svg wedge shape to an element
+/// Attatches an svg wedge shape to an element.
 ///
 /// @author Joseph Fusco
 ///
 /// @param  {String}  $location   - 'inside top', 'outside top', 'inside bottom', 'outside bottom'
 /// @param  {String}  $hypotenuse - 'upper left', 'upper right', 'lower left', 'lower right'
 /// @param  {Color}   $fill
-/// @param  {Number}  $width
-/// @param  {Number}  $height
+/// @param  {Number}  $height - unitless integer
+/// @param  {Number}  $width - unitless integer
 /// @output '::before' and/or '::after' with svg background image
 ///
-@mixin angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100) {
+@mixin angled-edge($location, $hypotenuse, $fill, $height: 100, $width: null) {
 
 	position: relative;
 
-	// polygon points for right triangle
 	$points: (
 		'upper left': '0,#{$height} #{$width},#{$height} #{$width},0',
 		'upper right': '0,#{$height} #{$width},#{$height} 0,0',
@@ -83,32 +85,47 @@
 		'lower right': '0,0 #{$width},0 0,#{$height}'
 	);
 
+	@if ($width == null) {
+		$points: (
+			'upper left': '0,#{$height} 100,#{$height} 100,0',
+			'upper right': '0,#{$height} 100,#{$height} 0,0',
+			'lower left': '0,0 100,#{$height} 100,0',
+			'lower right': '0,0 100,0 0,#{$height}'
+		);
+	}
+
 	// ensure $fill color is using rgb()
 	$fill-rgb: 'rgb(' + round(red($fill)) + ',' + round(green($fill)) + ',' + round(blue($fill)) + ')';
 
 	// capture alpha component of $fill to use with fill-opacity
 	$fill-alpha: alpha($fill);
 
-	$wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>');
+	$wedge: '<svg width="#{$width}" height="#{$height}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>';
+
+	@if ($width == null) {
+		$wedge: '<svg preserveAspectRatio="none" viewBox="0 0 100 #{$height}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>';
+	}
+
+	$encoded-wedge: ae-svg-encode($wedge);
 
 	@if ($location == 'inside top') {
 		&::before {
-			@include ae-pseudo($wedge, $height);
+			@include ae-pseudo($encoded-wedge, $height, $width);
 			top: 0;
 		}
 	} @else if ($location == 'outside top') {
 		&::before {
-			@include ae-pseudo($wedge, $height);
+			@include ae-pseudo($encoded-wedge, $height, $width);
 			top: -$height * 1px;
 		}
 	} @else if ($location == 'inside bottom') {
 		&::after {
-			@include ae-pseudo($wedge, $height);
+			@include ae-pseudo($encoded-wedge, $height, $width);
 			bottom: 0;
 		}
 	} @else if ($location == 'outside bottom') {
 		&::after {
-			@include ae-pseudo($wedge, $height);
+			@include ae-pseudo($encoded-wedge, $height, $width);
 			bottom: -$height * 1px;
 		}
 	} @else {
