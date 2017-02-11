@@ -1,0 +1,27 @@
+{
+  "name": "angled-edges",
+  "version": "2.0.0",
+  "description": "A SASS mixin for creating angled edges on sections by dynamically encoding SVGs.",
+  "main": "_angled-edges.scss",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephfusco/angled-edges.git"
+  },
+  "keywords": [
+    "svg",
+    "angled",
+    "edges",
+    "css"
+  ],
+  "author": "Joseph Fusco <hello@josephfus.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josephfusco/angled-edges/issues"
+  },
+  "homepage": "https://angled-edges.josephfus.co"
+}
