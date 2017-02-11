@@ -51,9 +51,12 @@
 	background-image: url($wedge);
 	background-position: center center;
 	background-repeat: no-repeat;
+
+	// full width wedge - needed as Firefox ignores preserveAspectRatio="none" in this case
 	@if ($width == null) {
 		background-size: 100% 100%;
 	}
+
 	content: '';
 	height: $height * 1px;
 	left: 0;
@@ -85,6 +88,7 @@
 		'lower right': '0,0 #{$width},0 0,#{$height}'
 	);
 
+	// full width wedge
 	@if ($width == null) {
 		$points: (
 			'upper left': '0,#{$height} 100,#{$height} 100,0',
@@ -102,6 +106,7 @@
 
 	$wedge: '<svg width="#{$width}" height="#{$height}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>';
 
+	// full width wedge
 	@if ($width == null) {
 		$wedge: '<svg preserveAspectRatio="none" viewBox="0 0 100 #{$height}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>';
 	}
