@@ -32,7 +32,7 @@ The main mixin creates an svg right triangle that is encoded, set as a backgroun
 
 Version 2 now defaults with a fluid width of 100%. Since this is the preferred value, width and height parameters have switched order with height now being first. This allows for easier usage where
 ```scss
-@include angled-edge('outside bottom', 'lower right', 150)
+@include angled-edge('outside bottom', 'lower right', 150);
 ```
 now means a 150px tall with at a default of 100% width. If a fluid width is not needed, you can still pass in a unitless width like in 1.x. If you previously were using `background-size` to manipulate the shape, you will need to remove this property as the mixin also uses this to assist with making the shape full-width.
 
