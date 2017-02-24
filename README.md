@@ -38,7 +38,7 @@ now means a 150px tall with at a default of 100% width. If a fluid width is not 
 
 ## Demo
 
-[http://angled-edges.josephfus.co](http://angled-edges.josephfus.co)
+[https://angled-edges.josephfus.co](http://angled-edges.josephfus.co)
 
 ## Browser Support
 
