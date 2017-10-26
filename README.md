@@ -4,6 +4,10 @@ A Sass mixin for creating angled edges on sections by dynamically encoding SVGs.
 
 <img width="1262" alt="angled edge" src="https://cloud.githubusercontent.com/assets/6676674/16118929/33700404-33a7-11e6-8e94-a9ace624a41a.png">
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/3iBBzXvUuHDVnDQaJWDxZfNw/josephfusco/angled-edges'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/3iBBzXvUuHDVnDQaJWDxZfNw/josephfusco/angled-edges.svg' />
+</a>
+
 ## Usage
 
 Import partial:
