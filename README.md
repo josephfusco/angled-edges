@@ -18,6 +18,10 @@ This mixin has 3 required parameters: **location**, **hypotenuse**, **fill**
 
 The main mixin creates an svg right triangle that is encoded, set as a background image of a pseudo element, and absolutely positioned.
 
+### Examples
+
+https://codepen.io/fusco/pen/mzymKm
+
 ## Options
 
 | Parameter | Description |
